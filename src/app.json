@@ -1,11 +1,16 @@
 {
   "pages": [
     "pages/index/main",
-    "pages/logs/main"  ],
+    "pages/logs/main",
+    "pages/about/main",
+    "pages/share/main",
+    "pages/feedback/main",
+    "pages/add/main"
+  ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "男人邦",
+    "navigationBarTextStyle": "#fff"
   }
 }

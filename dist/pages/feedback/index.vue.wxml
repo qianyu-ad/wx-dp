@@ -1,0 +1,2 @@
+<template name="77e5a3fd">
+  <view class="_div data-v-221a9883 fpg"><textarea class="_textarea data-v-221a9883 remark" value="{{value}}" bindinput="handleProxy" placeholder="请输入您的反馈信息" data-eventid="{{'0'}}" data-comkey="{{$k}}" /> <van-button class="_van-button data-v-221a9883 submit" type="primary" block="{{true}}" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}">提交</van-button></view></template>

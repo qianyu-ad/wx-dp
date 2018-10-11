@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "分享",
+    "usingComponents": {
+        "i-icon": "../../comps/iview/icon/index",
+        "i-button": "../../comps/iview/button/index"
+    }
+}

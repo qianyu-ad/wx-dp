@@ -1,0 +1,44 @@
+@import "../../common/vendor.wxss";
+
+.ct {
+  margin: 60rpx 40rpx 20rpx;
+  height: calc(100% - 208rpx);
+  background-color: #000;
+}
+.ctrl {
+  position: fixed;
+  bottom: 0;
+  left: 40rpx;
+  height: 128rpx;
+  padding-top: 16rpx;
+  padding-bottom: 16rpx;
+  overflow: hidden;
+  width: calc(100% - 80rpx);
+}
+.ctrl-btn {
+  width: calc(50% - 16rpx);
+  float: left;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  white-space: nowrap;
+  user-select: none;
+  font-size: 28rpx;
+  border-radius: 4rpx;
+  position: relative;
+  text-decoration: none;
+  height: 88rpx;
+  line-height: 88rpx;
+  box-shadow: inset 0 0 0 2rpx rgba(0,0,0,.1);
+  color: #fff;
+  background: #4e6584;
+}
+.download {
+  float: right;
+}
+page {
+  height: 100%;
+  background-color: #192044;
+}

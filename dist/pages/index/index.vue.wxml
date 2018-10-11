@@ -1,15 +1,36 @@
-<import src="/components/card.vue.wxml" /><template name="67b1eaf0">
-  <view class="_div data-v-1b1297ac container" bindtap="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}">
-    <view class="_div data-v-1b1297ac userinfo" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">
-      <image class="_img data-v-1b1297ac userinfo-avatar" wx:if="{{userInfo.avatarUrl}}" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <view class="_div data-v-1b1297ac userinfo-nickname"><template data="{{...$root[$kk+'0'], $root}}" is="16066462"></template></view>
+<template name="67b1eaf0">
+  <view class="_div data-v-1b1297ac cont">
+    <view hidden="{{!(showPage=='home')}}" class="_div data-v-1b1297ac">
+      <view class="_div data-v-1b1297ac banner">
+        <view class="_div data-v-1b1297ac banner-img" style=" {{('background-image:' + ('url(' + imageURL + ')') + ';')}}"></view>
+      </view>
+      <view class="_div data-v-1b1297ac content">
+        <view wx:key="i" key="{{i}}" class="_div data-v-1b1297ac card" wx:for="{{6}}" wx:for-index="index" wx:for-item="i">
+          <view class="_div data-v-1b1297ac card-mask">职场</view>
+          <view class="_div data-v-1b1297ac card-info">
+            <i-icon type="like" class="_i-icon data-v-1b1297ac card-icon" size="20" color="#f40"></i-icon> <label class="_span data-v-1b1297ac card-count card-count-mar">124</label>
+            <i-icon type="message" class="_i-icon data-v-1b1297ac card-icon" size="20" color="#2d8cf0"></i-icon> <label class="_span data-v-1b1297ac card-count">36</label>
+          </view>
+        </view>
+      </view>
     </view>
-    <view class="_div data-v-1b1297ac usermotto">
-      <view class="_div data-v-1b1297ac user-motto"><template data="{{...$root[$kk+'1'], $root}}" is="16066462"></template></view>
-      <i-button type="error" long="true" class="_i-button data-v-1b1297ac">联通两边按钮</i-button>
-      <i-button bind:click="handleClick" class="_i-button data-v-1b1297ac">默认按钮</i-button>
-      <i-button bind:click="handleClick" class="_i-button data-v-1b1297ac">默认按钮11</i-button>
+    <view hidden="{{!(showPage=='setting')}}" class="_div data-v-1b1297ac w100">
+      <view class="_div data-v-1b1297ac user-info">
+        <image src="{{userInfo.avatarUrl}}" alt class="_img data-v-1b1297ac avatar"></image>
+        <view class="_div data-v-1b1297ac name">{{userInfo.nickName}}</view>
+      </view>
+      <view class="_div data-v-1b1297ac sw">
+        <van-cell custom-class="mart" title="分享小程序" icon="share" is-link url="/pages/share/main" border="{{false}}" class="_van-cell data-v-1b1297ac"></van-cell>
+        <van-cell custom-class="mart" title="我的文章" icon="pending-orders" is-link border="{{false}}" class="_van-cell data-v-1b1297ac"></van-cell>
+        <van-cell custom-class title="我的收藏" icon="browsing-history" is-link border="{{false}}" class="_van-cell data-v-1b1297ac"></van-cell>
+        <van-cell custom-class title="意见反馈" icon="chat" is-link url="/pages/feedback/main" border="{{false}}" class="_van-cell data-v-1b1297ac"></van-cell>
+        <van-cell custom-class="mart" title="关于我们" icon="contact" is-link url="/pages/about/main" border="{{false}}" class="_van-cell data-v-1b1297ac"></van-cell>
+      </view>
     </view>
-    <form class="_form data-v-1b1297ac form-container"><input type="text" class="_input data-v-1b1297ac form-control" value="{{motto}}" bindinput="handleProxy" placeholder="v-model" data-eventid="{{'1'}}" data-comkey="{{$k}}" /> <input type="text" class="_input data-v-1b1297ac form-control" value="{{motto}}" bindblur="handleProxy" placeholder="v-model.lazy" data-eventid="{{'2'}}" data-comkey="{{$k}}" /></form>
+    <van-tabbar active="{{0}}" z-index="100" class="_van-tabbar data-v-1b1297ac">
+      <van-tabbar-item icon="home" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_van-tabbar-item data-v-1b1297ac">首页</van-tabbar-item>
+      <van-tabbar-item icon="add2" bindtap="handleProxy" class="_van-tabbar-item data-v-1b1297ac add" data-eventid="{{'1'}}" data-comkey="{{$k}}"></van-tabbar-item>
+      <van-tabbar-item icon="contact" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_van-tabbar-item data-v-1b1297ac">我</van-tabbar-item>
+    </van-tabbar>
   </view>
 </template>

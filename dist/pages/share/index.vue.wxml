@@ -1,0 +1,10 @@
+<template name="2a9465bd">
+  <view class="_div data-v-954da212 share-page">
+    <view class="_div data-v-954da212 ct"></view>
+    <view class="_div data-v-954da212 ctrl"><button class="_button data-v-954da212 ctrl-btn" open-type="share">
+        <i-icon type="share" size="20" class="_i-icon data-v-954da212"></i-icon> 发送给好友
+      </button> <button class="_button data-v-954da212 ctrl-btn download">
+        <i-icon type="task" size="20" class="_i-icon data-v-954da212"></i-icon> 保存图片
+      </button></view>
+  </view>
+</template>

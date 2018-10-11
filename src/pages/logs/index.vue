@@ -22,7 +22,20 @@ export default {
       logs: []
     }
   },
-
+  methods: {
+    getUserInfo () {
+        // 调用登录接口
+        wx.login({
+          success: () => {
+            wx.getUserInfo({
+              success: (res) => {
+                this.userInfo = res.userInfo
+              }
+            })
+          }
+        })
+      },
+    },
   created () {
     const logs = (wx.getStorageSync('logs') || [])
     this.logs = logs.map(log => formatTime(new Date(log)))

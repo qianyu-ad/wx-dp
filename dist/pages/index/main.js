@@ -1,22 +1,15 @@
 require("../../common/manifest.js");
 require("../../common/vendor.js");
-global.webpackJsonp([2],[
-/* 0 */,
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */
+global.webpackJsonp([4],{
+
+/***/ 24:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(25);
 
 
 
@@ -24,16 +17,17 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a(__WEBPACK_IMPORTED_MOD
 app.$mount();
 
 /***/ }),
-/* 9 */
+
+/***/ 25:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_1b1297ac_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_node_modules_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_1b1297ac_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_node_modules_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(31);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(10)
+  __webpack_require__(26)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
@@ -43,12 +37,12 @@ var normalizeComponent = __webpack_require__(0)
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-1b1297ac"
+var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_index_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_1b1297ac_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_node_modules_mpvue_loader_lib_selector_type_template_index_0_index_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_1b1297ac_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_node_modules_mpvue_loader_lib_selector_type_template_index_0_index_vue__["a" /* default */],
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
@@ -77,13 +71,15 @@ if (false) {(function () {
 
 
 /***/ }),
-/* 10 */
+
+/***/ 26:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 11 */
+
+/***/ 27:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -113,162 +109,241 @@ if (false) {(function () {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-  data: function data() {
-    return {
-      motto: 'Hello World211',
-      userInfo: {}
-    };
-  },
+    data: function data() {
+        return {
+            motto: 'Hello World211',
+            userInfo: {},
 
-  components: {
-    card: __WEBPACK_IMPORTED_MODULE_0__components_card__["a" /* default */]
-  },
-  methods: {
-    bindViewTap: function bindViewTap() {
-      var url = '../logs/main';
-      wx.navigateTo({ url: url });
+            // active: 0
+
+            current: 'homepage',
+            imageURL: 'http://misc.aotu.io/Chen-jj/waterful_5.jpg',
+            showPage: 'home'
+        };
     },
-    getUserInfo: function getUserInfo() {
-      var _this = this;
 
-      // 调用登录接口
-      wx.login({
-        success: function success() {
-          wx.getUserInfo({
-            success: function success(res) {
-              _this.userInfo = res.userInfo;
-            }
-          });
+    components: {
+        card: __WEBPACK_IMPORTED_MODULE_0__components_card__["a" /* default */]
+    },
+    methods: {
+        goList: function goList() {
+            // const url = "../list/main?id=" + this.option
+            var url = "../add/main";
+            wx.navigateTo({ url: url });
+        },
+        onChange: function onChange(event) {
+            console.log(event);
+        },
+        goAdd: function goAdd() {
+            var url = "../add/main";
+            wx.navigateTo({ url: url });
+        },
+
+
+        // 
+        getUserInfo: function getUserInfo() {
+            var _this = this;
+
+            // 调用登录接口
+            wx.login({
+                success: function success() {
+                    wx.getUserInfo({
+                        success: function success(res) {
+                            console.log(res.userInfo);
+                            _this.userInfo = res.userInfo;
+                        }
+                    });
+                }
+            });
         }
-      });
     },
-    clickHandle: function clickHandle(msg, ev) {
-      console.log('clickHandle:', msg, ev);
+    created: function created() {
+        this.getUserInfo();
     }
-  },
-  created: function created() {
-    // 调用应用实例的方法获取全局数据
-    this.getUserInfo();
-  }
 });
 
 /***/ }),
-/* 12 */,
-/* 13 */,
-/* 14 */,
-/* 15 */
+
+/***/ 31:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "container",
-    attrs: {
-      "eventid": '3'
-    },
-    on: {
-      "click": function($event) {
-        _vm.clickHandle('test click', $event)
-      }
-    }
+    staticClass: "cont"
   }, [_c('div', {
-    staticClass: "userinfo",
-    attrs: {
-      "eventid": '0'
-    },
-    on: {
-      "click": _vm.bindViewTap
-    }
-  }, [(_vm.userInfo.avatarUrl) ? _c('img', {
-    staticClass: "userinfo-avatar",
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.showPage == 'home'),
+      expression: "showPage=='home'"
+    }]
+  }, [_c('div', {
+    staticClass: "banner"
+  }, [_c('div', {
+    staticClass: "banner-img",
+    style: ({
+      'background-image': 'url(' + _vm.imageURL + ')'
+    })
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "content"
+  }, _vm._l((6), function(i, index) {
+    return _c('div', {
+      key: i,
+      staticClass: "card"
+    }, [_c('div', {
+      staticClass: "card-mask"
+    }, [_vm._v("职场")]), _vm._v(" "), _c('div', {
+      staticClass: "card-info"
+    }, [_c('i-icon', {
+      staticClass: "card-icon",
+      attrs: {
+        "type": "like",
+        "size": "20",
+        "color": "#f40",
+        "mpcomid": '0-' + index
+      }
+    }), _vm._v(" "), _c('span', {
+      staticClass: "card-count card-count-mar"
+    }, [_vm._v("124")]), _vm._v(" "), _c('i-icon', {
+      staticClass: "card-icon",
+      attrs: {
+        "type": "message",
+        "size": "20",
+        "color": "#2d8cf0",
+        "mpcomid": '1-' + index
+      }
+    }), _vm._v(" "), _c('span', {
+      staticClass: "card-count"
+    }, [_vm._v("36")])], 1)])
+  }))]), _vm._v(" "), _c('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.showPage == 'setting'),
+      expression: "showPage=='setting'"
+    }],
+    staticClass: "w100"
+  }, [_c('div', {
+    staticClass: "user-info"
+  }, [_c('img', {
+    staticClass: "avatar",
     attrs: {
       "src": _vm.userInfo.avatarUrl,
-      "background-size": "cover"
+      "alt": ""
     }
-  }) : _vm._e(), _vm._v(" "), _c('div', {
-    staticClass: "userinfo-nickname"
-  }, [_c('card', {
+  }), _vm._v(" "), _c('div', {
+    staticClass: "name"
+  }, [_vm._v(_vm._s(_vm.userInfo.nickName))])]), _vm._v(" "), _c('div', {
+    staticClass: "sw"
+  }, [_c('van-cell', {
     attrs: {
-      "text": _vm.userInfo.nickName,
-      "mpcomid": '0'
-    }
-  })], 1)]), _vm._v(" "), _c('div', {
-    staticClass: "usermotto"
-  }, [_c('div', {
-    staticClass: "user-motto"
-  }, [_c('card', {
-    attrs: {
-      "text": _vm.motto,
-      "mpcomid": '1'
-    }
-  })], 1), _vm._v(" "), _c('i-button', {
-    attrs: {
-      "type": "error",
-      "long": "true",
+      "custom-class": "mart",
+      "title": "分享小程序",
+      "icon": "share",
+      "is-link": "",
+      "url": "/pages/share/main",
+      "border": false,
       "mpcomid": '2'
     }
-  }, [_vm._v("联通两边按钮")]), _vm._v(" "), _c('i-button', {
+  }), _vm._v(" "), _c('van-cell', {
     attrs: {
-      "bind:click": "handleClick",
+      "custom-class": "mart",
+      "title": "我的文章",
+      "icon": "pending-orders",
+      "is-link": "",
+      "border": false,
       "mpcomid": '3'
     }
-  }, [_vm._v("默认按钮")]), _vm._v(" "), _c('i-button', {
+  }), _vm._v(" "), _c('van-cell', {
     attrs: {
-      "bind:click": "handleClick",
+      "custom-class": "",
+      "title": "我的收藏",
+      "icon": "browsing-history",
+      "is-link": "",
+      "border": false,
       "mpcomid": '4'
     }
-  }, [_vm._v("默认按钮11")])], 1), _vm._v(" "), _c('form', {
-    staticClass: "form-container"
-  }, [_c('input', {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: (_vm.motto),
-      expression: "motto"
-    }],
-    staticClass: "form-control",
+  }), _vm._v(" "), _c('van-cell', {
     attrs: {
-      "type": "text",
-      "placeholder": "v-model",
-      "eventid": '1'
-    },
-    domProps: {
-      "value": (_vm.motto)
+      "custom-class": "",
+      "title": "意见反馈",
+      "icon": "chat",
+      "is-link": "",
+      "url": "/pages/feedback/main",
+      "border": false,
+      "mpcomid": '5'
+    }
+  }), _vm._v(" "), _c('van-cell', {
+    attrs: {
+      "custom-class": "mart",
+      "title": "关于我们",
+      "icon": "contact",
+      "is-link": "",
+      "url": "/pages/about/main",
+      "border": false,
+      "mpcomid": '6'
+    }
+  })], 1)]), _vm._v(" "), _c('van-tabbar', {
+    attrs: {
+      "active": 0,
+      "z-index": "100",
+      "mpcomid": '10'
+    }
+  }, [_c('van-tabbar-item', {
+    attrs: {
+      "icon": "home",
+      "eventid": '0',
+      "mpcomid": '7'
     },
     on: {
-      "input": function($event) {
-        if ($event.target.composing) { return; }
-        _vm.motto = $event.target.value
+      "tap": function($event) {
+        _vm.showPage = 'home'
       }
     }
-  }), _vm._v(" "), _c('input', {
-    directives: [{
-      name: "model",
-      rawName: "v-model.lazy",
-      value: (_vm.motto),
-      expression: "motto",
-      modifiers: {
-        "lazy": true
-      }
-    }],
-    staticClass: "form-control",
+  }, [_vm._v("首页")]), _vm._v(" "), _c('van-tabbar-item', {
+    staticClass: "add",
     attrs: {
-      "type": "text",
-      "placeholder": "v-model.lazy",
-      "eventid": '2'
-    },
-    domProps: {
-      "value": (_vm.motto)
+      "icon": "add2",
+      "eventid": '1',
+      "mpcomid": '8'
     },
     on: {
-      "change": function($event) {
-        _vm.motto = $event.target.value
+      "click": _vm.goAdd
+    }
+  }), _vm._v(" "), _c('van-tabbar-item', {
+    attrs: {
+      "icon": "contact",
+      "eventid": '2',
+      "mpcomid": '9'
+    },
+    on: {
+      "tap": function($event) {
+        _vm.showPage = 'setting'
       }
     }
-  })])], 1)
+  }, [_vm._v("我")])], 1)], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -282,5 +357,6 @@ if (false) {
 }
 
 /***/ })
-],[8]);
+
+},[24]);
 //# sourceMappingURL=main.js.map

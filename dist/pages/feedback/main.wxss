@@ -1,0 +1,22 @@
+@import "../../common/vendor.wxss";
+
+.fpg {
+  height: 100%;
+}
+.remark {
+  width: 100%;
+  padding: 12rpx;
+  font-size: 24rpx;
+  background: #fff;
+  height: calc(100% - 160rpx);
+}
+.submit {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+page {
+  height: 100%;
+  background-color: #e0e0e0;
+}

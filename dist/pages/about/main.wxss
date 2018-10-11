@@ -1,0 +1,31 @@
+@import "../../common/vendor.wxss";
+
+.logo {
+  width: 240rpx;
+  height: 240rpx;
+  background: #dee5ea;
+  margin: 80rpx auto;
+  overflow: hidden;
+}
+.logo ._img {
+  display: block;
+  width: 200rpx;
+  height: 200rpx;
+  margin: 20rpx auto;
+  border-radius: 50%;
+}
+.info {
+  border-top: 2rpx solid #dee5ea;
+}
+.info-title {
+  line-height: 60rpx;
+  font-size: 32rpx;
+  color: #333;
+  padding: 20rpx 30rpx 10rpx;
+}
+.info-cont {
+  line-height: 48rpx;
+  font-size: 26rpx;
+  color: #aaa;
+  padding: 0 30rpx;
+}

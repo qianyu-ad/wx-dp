@@ -1,0 +1,11 @@
+<template name="6999f7eb">
+  <view class="_div data-v-17427db6">
+    <view class="_div data-v-17427db6 logo">
+      <image src="/static/img/logo.jpg" alt class="_img data-v-17427db6"></image>
+    </view>
+    <view class="_div data-v-17427db6 info">
+      <view class="_div data-v-17427db6 info-title">关于我们</view>
+      <view class="_div data-v-17427db6 info-cont">随便穿，随便好看，发现新的自己，穿出我新生,随便穿，随便好看，发现新的自己，穿出我新生,随便穿，随便好看，发现新的自己，穿出我新生~</view>
+    </view>
+  </view>
+</template>
