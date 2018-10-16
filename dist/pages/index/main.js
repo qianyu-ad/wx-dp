@@ -127,6 +127,18 @@ if (false) {(function () {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
@@ -176,6 +188,21 @@ if (false) {(function () {
                     });
                 }
             });
+        },
+        gg: function gg() {
+            wx.getSetting({
+                success: function success(res) {
+                    console.log(res);
+                    if (res.authSetting['scope.userInfo']) {
+                        wx.getUserInfo({
+                            success: function success(res) {
+                                console.log(res.userInfo);
+                                //用户已经授权过
+                            }
+                        });
+                    }
+                }
+            });
         }
     },
     created: function created() {
@@ -204,25 +231,40 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
   }, [_c('div', {
     staticClass: "banner-img",
     style: ({
-      'background-image': 'url(' + _vm.imageURL + ')'
+      'background-image': 'url(http://c1.haibao.cn/img/600_0_100_1/1532675134.8818/00f7cc85e99abe8226d1606d794f540a.jpg)'
     })
   })]), _vm._v(" "), _c('div', {
     staticClass: "content"
-  }, _vm._l((6), function(i, index) {
+  }, [_vm._l((6), function(i, index) {
     return _c('div', {
       key: i,
-      staticClass: "card"
+      staticClass: "card",
+      style: ({
+        'background-image': 'url(http://seopic.699pic.com/photo/50038/5465.jpg_wh1200.jpg)'
+      })
     }, [_c('div', {
       staticClass: "card-mask"
     }, [_vm._v("职场")]), _vm._v(" "), _c('div', {
       staticClass: "card-info"
+    }, [_vm._m(0, true), _vm._v(" "), _c('div', {
+      staticClass: "card-info-r"
     }, [_c('i-icon', {
+      staticClass: "card-icon",
+      attrs: {
+        "type": "browse",
+        "size": "20",
+        "color": "#fff",
+        "mpcomid": '0-' + index
+      }
+    }), _vm._v(" "), _c('span', {
+      staticClass: "card-count card-count-mar"
+    }, [_vm._v("1113")]), _vm._v(" "), _c('i-icon', {
       staticClass: "card-icon",
       attrs: {
         "type": "like",
         "size": "20",
         "color": "#f40",
-        "mpcomid": '0-' + index
+        "mpcomid": '1-' + index
       }
     }), _vm._v(" "), _c('span', {
       staticClass: "card-count card-count-mar"
@@ -232,12 +274,24 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
         "type": "message",
         "size": "20",
         "color": "#2d8cf0",
-        "mpcomid": '1-' + index
+        "mpcomid": '2-' + index
       }
     }), _vm._v(" "), _c('span', {
       staticClass: "card-count"
-    }, [_vm._v("36")])], 1)])
-  }))]), _vm._v(" "), _c('div', {
+    }, [_vm._v("36")])], 1)])])
+  }), _vm._v(" "), _c('button', {
+    attrs: {
+      "open-type": "getUserInfo"
+    }
+  }, [_vm._v("测试授权")]), _vm._v(" "), _c('button', {
+    attrs: {
+      "open-type": "getUserInfo",
+      "eventid": '0'
+    },
+    on: {
+      "tap": _vm.gg
+    }
+  }, [_vm._v("测试授权2")])], 2)]), _vm._v(" "), _c('div', {
     directives: [{
       name: "show",
       rawName: "v-show",
@@ -265,7 +319,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       "is-link": "",
       "url": "/pages/share/main",
       "border": false,
-      "mpcomid": '2'
+      "mpcomid": '3'
     }
   }), _vm._v(" "), _c('van-cell', {
     attrs: {
@@ -274,7 +328,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       "icon": "pending-orders",
       "is-link": "",
       "border": false,
-      "mpcomid": '3'
+      "mpcomid": '4'
     }
   }), _vm._v(" "), _c('van-cell', {
     attrs: {
@@ -283,7 +337,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       "icon": "browsing-history",
       "is-link": "",
       "border": false,
-      "mpcomid": '4'
+      "mpcomid": '5'
     }
   }), _vm._v(" "), _c('van-cell', {
     attrs: {
@@ -293,7 +347,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       "is-link": "",
       "url": "/pages/feedback/main",
       "border": false,
-      "mpcomid": '5'
+      "mpcomid": '6'
     }
   }), _vm._v(" "), _c('van-cell', {
     attrs: {
@@ -303,19 +357,20 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       "is-link": "",
       "url": "/pages/about/main",
       "border": false,
-      "mpcomid": '6'
+      "mpcomid": '7'
     }
   })], 1)]), _vm._v(" "), _c('van-tabbar', {
+    staticClass: "tabbar",
     attrs: {
       "active": 0,
       "z-index": "100",
-      "mpcomid": '10'
+      "mpcomid": '11'
     }
   }, [_c('van-tabbar-item', {
     attrs: {
       "icon": "home",
-      "eventid": '0',
-      "mpcomid": '7'
+      "eventid": '1',
+      "mpcomid": '8'
     },
     on: {
       "tap": function($event) {
@@ -326,8 +381,8 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     staticClass: "add",
     attrs: {
       "icon": "add2",
-      "eventid": '1',
-      "mpcomid": '8'
+      "eventid": '2',
+      "mpcomid": '9'
     },
     on: {
       "click": _vm.goAdd
@@ -335,8 +390,8 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
   }), _vm._v(" "), _c('van-tabbar-item', {
     attrs: {
       "icon": "contact",
-      "eventid": '2',
-      "mpcomid": '9'
+      "eventid": '3',
+      "mpcomid": '10'
     },
     on: {
       "tap": function($event) {
@@ -345,7 +400,19 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     }
   }, [_vm._v("我")])], 1)], 1)
 }
-var staticRenderFns = []
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "card-info-l"
+  }, [_c('img', {
+    staticClass: "card-avatar",
+    attrs: {
+      "src": "https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83erdaa8d4icn2cfyV8e3N0Eto8uN5WicxKW02BtGhIibETSSibSBdqKRbF01NGngWaImrY0MBMQuCFoEbw/132",
+      "alt": ""
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "card-un"
+  }, [_vm._v("千雨")])])
+}]
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);

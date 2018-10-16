@@ -3,6 +3,9 @@
 page {
   background: #f5f6f5;
 }
+.tabbar .van-tabbar--fixed {
+  bottom: -2rpx !important;
+}
 .w100 {
   width: 100%;
 }
@@ -44,6 +47,8 @@ page {
   border: 2rpx solid #f0f0f0;
   border-radius: 4rpx;
   position: relative;
+  background-size: cover;
+  background-position: center;
 }
 .card-mask {
   height: 48rpx;
@@ -77,16 +82,47 @@ page {
 }
 .card-info {
   position: absolute;
-  bottom: 10rpx;
-  right: 30rpx;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 10rpx 30rpx;
+  height: 56rpx;
+  overflow: hidden;
+  background-color: rgba(0,0,0,.3);
+}
+.card-info-l {
+  float: left;
   text-align: right;
+}
+.card-info-r {
+  float: right;
+  text-align: right;
+}
+.card-avatar {
+  float: left;
+  width: 56rpx;
+  height: 56rpx;
+  display: block;
+  border-radius: 50%;
+  margin-right: 8rpx;
+}
+.card-un {
+  color: #fff;
+  display: block;
+  width: 220rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 22rpx;
+  line-height: 56rpx;
+  text-align: left;
 }
 .card-icon {
   vertical-align: middle;
 }
 .card-count {
   font-size: 20rpx;
-  color: #666;
+  color: #fff;
   margin-right: 2rpx;
 }
 .card-count-mar {

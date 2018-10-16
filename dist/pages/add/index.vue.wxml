@@ -1,5 +1,8 @@
 <template name="424488bf">
   <view class="_div data-v-643e5879 container">
     <view class="_h1 data-v-643e5879">发表文章</view>
+    <view class="_div data-v-643e5879">{{userInfo.nickName}}</view>
+    <open-data type="userAvatarUrl" class="_open-data data-v-643e5879"></open-data>
+    <open-data type="userGender" lang="zh_CN" class="_open-data data-v-643e5879"></open-data>
   </view>
 </template>

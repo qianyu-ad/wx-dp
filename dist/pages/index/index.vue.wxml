@@ -2,16 +2,22 @@
   <view class="_div data-v-1b1297ac cont">
     <view hidden="{{!(showPage=='home')}}" class="_div data-v-1b1297ac">
       <view class="_div data-v-1b1297ac banner">
-        <view class="_div data-v-1b1297ac banner-img" style=" {{('background-image:' + ('url(' + imageURL + ')') + ';')}}"></view>
+        <view class="_div data-v-1b1297ac banner-img" style=" {{(  'background-image:' +  'url(http://c1.haibao.cn/img/600_0_100_1/1532675134.8818/00f7cc85e99abe8226d1606d794f540a.jpg)' +  ';')}}"></view>
       </view>
       <view class="_div data-v-1b1297ac content">
-        <view wx:key="i" key="{{i}}" class="_div data-v-1b1297ac card" wx:for="{{6}}" wx:for-index="index" wx:for-item="i">
+        <view wx:key="i" key="{{i}}" class="_div data-v-1b1297ac card" wx:for="{{6}}" wx:for-index="index" wx:for-item="i" style=" {{(  'background-image:' +  'url(http://seopic.699pic.com/photo/50038/5465.jpg_wh1200.jpg)' +  ';')}}">
           <view class="_div data-v-1b1297ac card-mask">职场</view>
           <view class="_div data-v-1b1297ac card-info">
-            <i-icon type="like" class="_i-icon data-v-1b1297ac card-icon" size="20" color="#f40"></i-icon> <label class="_span data-v-1b1297ac card-count card-count-mar">124</label>
-            <i-icon type="message" class="_i-icon data-v-1b1297ac card-icon" size="20" color="#2d8cf0"></i-icon> <label class="_span data-v-1b1297ac card-count">36</label>
+            <view class="_div data-v-1b1297ac card-info-l">
+              <image class="_img data-v-1b1297ac card-avatar" src="https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83erdaa8d4icn2cfyV8e3N0Eto8uN5WicxKW02BtGhIibETSSibSBdqKRbF01NGngWaImrY0MBMQuCFoEbw/132" alt></image> <label class="_span data-v-1b1297ac card-un">千雨</label>
+            </view>
+            <view class="_div data-v-1b1297ac card-info-r">
+              <i-icon type="browse" class="_i-icon data-v-1b1297ac card-icon" size="20" color="#fff"></i-icon> <label class="_span data-v-1b1297ac card-count card-count-mar">1113</label>
+              <i-icon type="like" class="_i-icon data-v-1b1297ac card-icon" size="20" color="#f40"></i-icon> <label class="_span data-v-1b1297ac card-count card-count-mar">124</label>
+              <i-icon type="message" class="_i-icon data-v-1b1297ac card-icon" size="20" color="#2d8cf0"></i-icon> <label class="_span data-v-1b1297ac card-count">36</label>
+            </view>
           </view>
-        </view>
+        </view> <button open-type="getUserInfo" class="_button data-v-1b1297ac">测试授权</button> <button open-type="getUserInfo" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_button data-v-1b1297ac">测试授权2</button>
       </view>
     </view>
     <view hidden="{{!(showPage=='setting')}}" class="_div data-v-1b1297ac w100">
@@ -27,10 +33,10 @@
         <van-cell custom-class="mart" title="关于我们" icon="contact" is-link url="/pages/about/main" border="{{false}}" class="_van-cell data-v-1b1297ac"></van-cell>
       </view>
     </view>
-    <van-tabbar active="{{0}}" z-index="100" class="_van-tabbar data-v-1b1297ac">
-      <van-tabbar-item icon="home" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_van-tabbar-item data-v-1b1297ac">首页</van-tabbar-item>
-      <van-tabbar-item icon="add2" bindtap="handleProxy" class="_van-tabbar-item data-v-1b1297ac add" data-eventid="{{'1'}}" data-comkey="{{$k}}"></van-tabbar-item>
-      <van-tabbar-item icon="contact" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_van-tabbar-item data-v-1b1297ac">我</van-tabbar-item>
+    <van-tabbar active="{{0}}" class="_van-tabbar data-v-1b1297ac tabbar" z-index="100">
+      <van-tabbar-item icon="home" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_van-tabbar-item data-v-1b1297ac">首页</van-tabbar-item>
+      <van-tabbar-item icon="add2" bindtap="handleProxy" class="_van-tabbar-item data-v-1b1297ac add" data-eventid="{{'2'}}" data-comkey="{{$k}}"></van-tabbar-item>
+      <van-tabbar-item icon="contact" bindtap="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_van-tabbar-item data-v-1b1297ac">我</van-tabbar-item>
     </van-tabbar>
   </view>
 </template>

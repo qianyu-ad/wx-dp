@@ -105,12 +105,18 @@ if (false) {(function () {
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     data: function data() {
         return {
-            value: ''
+            value: '',
+            userInfo: {}
         };
+    },
+    created: function created() {
+        this.getUserInfo();
     },
 
     methods: {
@@ -119,6 +125,22 @@ if (false) {(function () {
         },
         handleRemove: function handleRemove(index) {
             this.$emit('removeItem', index);
+        },
+        getUserInfo: function getUserInfo() {
+            var _this = this;
+
+            // 调用登录接口
+            wx.login({
+                success: function success() {
+                    wx.getUserInfo({
+                        success: function success(res) {
+                            console.log(res.userInfo);
+                            _this.userInfo = res.userInfo;
+                        }
+
+                    });
+                }
+            });
         }
     }
 });
@@ -131,7 +153,18 @@ if (false) {(function () {
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "container"
-  }, [_c('h1', [_vm._v("发表文章")])], 1)
+  }, [_c('h1', [_vm._v("发表文章")]), _vm._v(" "), _c('div', [_vm._v(_vm._s(_vm.userInfo.nickName))]), _vm._v(" "), _c('open-data', {
+    attrs: {
+      "type": "userAvatarUrl",
+      "mpcomid": '0'
+    }
+  }), _vm._v(" "), _c('open-data', {
+    attrs: {
+      "type": "userGender",
+      "lang": "zh_CN",
+      "mpcomid": '1'
+    }
+  })], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
